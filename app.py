@@ -1,20 +1,21 @@
-from flask import Flask, jsonify, request
+def reduce_to_single_digit(num):
+    while num > 9 and num not in [11, 22, 33]:
+        num = sum(int(digit) for digit in str(num))
+    return num
 
+def calculate_life_path(birth_date):
+    digits = [int(char) for char in birth_date if char.isdigit()]
+    return reduce_to_single)digit(sum(digits))
 
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-	return "Welcome to the Numerology Backend!"
-
-# Sample numerology calculation endpoint
 @app.route('/calculate', methods=['POST'])
 def calculate_numerology():
-	data = request.json
-	name = data.get("name", "")
-	birthdate = data.get("birthdate", "")
-	result = f"Numerology report for {name}, born on {birthdate}"
-	return jsonify({"report": result})
+    data = request.json
+    name = data.get("name", "")
 
-if __name__ == "__main__":
-	app.run(host='0.0.0.0', port=8080)
+    if not birthdate:
+        return jsonify({"error": "Birthdate is required"}), 400
+
+    life_path_number = calculate_life_path(birthdate)
+    report = f"Numerology report for {name}, born on {birthdate}: Your Life Path Number is {life_path_number}"
+
+    return jsonify({"report": report})
