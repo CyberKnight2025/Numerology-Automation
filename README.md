@@ -14,7 +14,7 @@ This project automates numerology calculations, stores reports, visualizes trend
 - VB.NET WinForms App (in development) for user interaction
 - Azure SQL integration for scalable cloud analytics
 - Power BI dashboards and Apache Superset visualizations
-- ⚙Bash automation scripts and Docker-ready environment
+- Bash automation scripts and Docker-ready environment
 - Bitwarden for secure credential management
 - pfSense firewall VM for network simulation
 - Hyper-V virtual lab with Ubuntu, Bitwarden, Solr, Superset, and pfSense
