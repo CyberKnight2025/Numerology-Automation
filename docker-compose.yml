@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14
+    container_name: numerology-postgres
+    environment:
+      POSTGRES_USER: numerouser
+      POSTGRES_PASSWORD: Kickball#03*
+      POSTGRES_DB: numerology
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  app:
+    build: .
+    container_name: numerology-backend-container
+    ports:
+      - "5050:5000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: numerology
+      DB_USER: numerouser
+      DB_PASSWORD: Kickball#03*
+    volumes:
+      - .:/app
+volumes:
+  pgdata:
