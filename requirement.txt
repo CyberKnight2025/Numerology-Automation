@@ -1,0 +1,18 @@
+# Web Framework
+Flask==2.3.3
+
+# Database Driver for PostgreSQL
+psycopg2-binary==2.9.10
+
+# Environment Variable Loader
+python-dotenv==1.0.1
+
+# Testing (optional but good to have)
+pytest==8.2.1
+coverage==7.5.1
+
+# Linting & Code Quality (optional but useful)
+flake8==7.0.0
+
+# For type hinting and IDE support (optional)
+types-requests==2.31.0.20240406
