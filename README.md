@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Numerology-Automation
 
 A multi-platform numerology intelligence system integrating Python, Bash, PostgreSQL, Azure SQL, Hyper-V infrastructure, VB.NET, Power BI, and GitHub CI/CD automation.
@@ -142,4 +142,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## ⚠️ Disclaimer
 
 This is an educational and personal development project. Numerology results are not scientific and should not be used as a substitute for professional advice.
->>>>>>> master
+
